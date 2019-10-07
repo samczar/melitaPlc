@@ -21,7 +21,8 @@ export class OfferListComponent implements OnInit {
   }
   selectOffer(id) {
     this.dataService.getSubscription(id).subscribe(data => {
-      return data;
+      this.selectedOffer = data;
+      console.log(this.selectedOffer);
     });
   }
 }

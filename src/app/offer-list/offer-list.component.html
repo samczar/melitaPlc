@@ -27,13 +27,16 @@
       </tr>
     </tbody>
   </table>
-  <div class="card text-center">
-    <!-- <div class="card-header">{{ selectedOffer.subscriptions.id }}</div> -->
-    <div class="card-block">
-      <!-- <h4 class="card-title">{{ selectedOffer.subscriptions.name }}</h4> -->
-      <p class="card-text">
-        <!-- {{ selectedOffer.description }} -->
-      </p>
+  <div class="card text-center" *ngIf="selectOffer">
+    <div *ngFor="let offer of offers['offers']"></div>
+    <div class="card-header">
+      {{ selectedOffer }}
+      <div class="card-block">
+        <!-- <h4 class="card-title">{{ selectedOffer.subscriptions.name }}</h4> -->
+        <p class="card-text">
+          <!-- {{ selectedOffer.description }} -->
+        </p>
+      </div>
     </div>
   </div>
 </div>
