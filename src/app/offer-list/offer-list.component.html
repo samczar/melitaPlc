@@ -28,9 +28,11 @@
     </tbody>
   </table>
   <div class="card text-center" *ngIf="selectOffer">
-    <div *ngFor="let offer of offers['offers']"></div>
+    <div *ngFor="let offer of selectedOffer['subscriptions']"></div>
     <div class="card-header">
-      {{ selectedOffer }}
+      <div *ngFor="let sub of selectedOffer.subscriptions">
+        {{ sub.id }}{{ sub.name }}{{ sub.type }}
+      </div>
       <div class="card-block">
         <!-- <h4 class="card-title">{{ selectedOffer.subscriptions.name }}</h4> -->
         <p class="card-text">
