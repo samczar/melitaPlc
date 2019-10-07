@@ -20,10 +20,7 @@
         <td>{{ offer.contractStartDate }}</td>
         <td>{{ offer.contractEndDate }}</td>
         <td>
-          <button
-            class="btn btn-primary"
-            (click)="selectoffer(offer.subsctiptions.id)"
-          >
+          <button class="btn btn-primary" (click)="selectOffer(offer.id)">
             Show details
           </button>
         </td>
@@ -31,9 +28,9 @@
     </tbody>
   </table>
   <div class="card text-center">
-    <div class="card-header">{{ selectedOffer.subsctiptions.id }}</div>
+    <!-- <div class="card-header">{{ selectedOffer.subscriptions.id }}</div> -->
     <div class="card-block">
-      <h4 class="card-title">{{ selectedOffer.subsctiptions.name }}</h4>
+      <!-- <h4 class="card-title">{{ selectedOffer.subscriptions.name }}</h4> -->
       <p class="card-text">
         <!-- {{ selectedOffer.description }} -->
       </p>

@@ -31,7 +31,7 @@ export class DataService {
 
   public getSubscription(id) {
     return this.http.get(`${this.baseUrl}/${id}/subscriptions`).pipe(
-      tap(data => console.log(data)),
+      tap(data => data),
       catchError(this.handleError)
     );
   }
